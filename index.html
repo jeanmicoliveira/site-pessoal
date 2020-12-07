@@ -14,23 +14,24 @@
 </head>
 
 <body><!-- inicio da barra de navegação -->
-    <nav class="navbar container fixed-top">
+    <nav class="navbar fixed-top">
+        <div class="nav-container">
+            <a class="logo" href="index.html"><img src="img/dev1.svg" alt="Logo"></a>
 
-        <a class="logo" href="index.html"><img src="img/dev1.svg" alt="Logo"></a>
-
-        <div class="navbar-content">
-            <ul>
-                <li class="item">
-                    <a href="https://github.com/jeanmicoliveira/" target="_blank">
-                        <img src="img/github-blue.svg" alt="github">
-                    </a>
-                </li>
-                <li class="item">
-                    <a href="https://www.linkedin.com/in/jeanmic-oliveira/" target="_blank">
-                        <img src="img/linkedin-round-color.svg" alt="linkedin">
-                    </a>
-                </li>
-            </ul>
+            <div class="navbar-content">
+                <ul>
+                    <li class="nav-item">
+                        <a href="https://github.com/jeanmicoliveira/" target="_blank">
+                            <img src="img/github-blue.svg" alt="github">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.linkedin.com/in/jeanmic-oliveira/" target="_blank">
+                            <img src="img/linkedin-round-color.svg" alt="linkedin">
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <!-- fim da barrada de navegação  -->
@@ -38,7 +39,7 @@
     <section id="home" class="home">
         <div class="home-info">
             <h1>Jean Oliveira</h1>
-            <p>Desenvolvedor Web | Front End</p>
+            <p class="separador">Desenvolvedor Web | Front End</p>
         </div>
         <div class="home-btn">
             <a class="btn" href="mainto:jeanoliveira@unigranrio.br" target="_blank">Fale Comigo</a>
@@ -55,14 +56,16 @@
     </section>
 
     <section id="sobre" class="sobre container">
-        <h2>Um pouco sobre mim ...</h2>
 
-        <div class="sobre-photo">
+        <div class="sobre-content">
             <div class="photo">
                 <img src="img/eu.png" alt="Jean Oliveira">
             </div>
 
             <div class="sobre-info">
+
+                <h2 class="separador">Um pouco sobre mim ...</h2>
+
                 <p>Meu nome é Jean, tenho 30 anos, sou carioca da gema e estudante de Analise e Desenvolvimento de Sistemas.</p><br>
                 <p>Sempre fui apaixonado por tecnologia. Aprendi a utilizar o joystick do Atari do meu pai, antes mesmo de andar e falar.</p><br>
                 <p>Já da pra imaginar de onde veio toda essa paixão, não é mesmo?!</p>
@@ -70,40 +73,40 @@
         </div>
     </section>
 
-    <section id="projetos" class="projetos container">
-        <h2>Projetos</h2>
+    <section id="projetos" class="projetos" data-proj="sites">
+        <h2 class="separador">Projetos</h2>
+        <div class="container">
+            <ul class="proj-menu">
+                <li><a class="btn" href="#flexblog" data-click="flexblog">Flexblog</a></li>
+                <li><a class="btn" href="#wildbeast" data-click="wildbeast">WildBeast</a></li>
+                <li><a class="btn" href="#bikcraft" data-click="bikcraft">BikCraft</a></li>
+                <li><a class="btn" href="#caravan" data-click="caravan">Caravan</a></li>
+            </ul>
 
-        <ul class="proj-menu">
-            <li><a href="#flexblog" data-click="flexblog">Flexblog</a></li>
-            <li><a href="#wildbeast" data-click="wildbeast">WildBeast</a></li>
-            <li><a href="#bikcraft" data-click="bikcraft">BikCraft</a></li>
-            <li><a href="#caravan" data-click="caravan">Caravan</a></li>
-        </ul>
+            <div class="item" id="flexblog" data-target="flexblog">
+                <div class="item-img">
+                    <img src="img/flexblog.jpg" alt="Flexblog">
+                </div>
+            </div>
 
-        <div class="item" id="flexblog" data-target="flexblog">
-            <div class="item-img">
-                <img src="img/flexblog.jpg" alt="Flexblog">
+            <div class="item" id="wildbeast" data-target="wildbeast">
+                <div class="item-img">
+                    <img src="img/wildbeast.jpg" alt="WildBeast">
+                </div>
+            </div>
+
+            <div class="item" id="caravan" data-target="caravan">
+                <div class="item-img">
+                    <img src="img/caravan.png" alt="Caravan">
+                </div>
+            </div>
+
+            <div class="item" id="bickcraft" data-target="bikcraft">
+                <div class="item-img">
+                    <img src="img/bikcraft.jpg" alt="BikCraft">
+                </div>
             </div>
         </div>
-
-        <div class="item" id="wildbeast" data-target="wildbeast">
-            <div class="item-img">
-                <img src="img/wildbeast.jpg" alt="WildBeast">
-            </div>
-        </div>
-
-        <div class="item" id="caravan" data-target="caravan">
-            <div class="item-img">
-                <img src="img/caravan.png" alt="Caravan">
-        </div>
-    </div>
-
-        <div class="item" id="bickcraft" data-target="bikcraft">
-            <div class="item-img">
-                <img src="img/bikcraft.jpg" alt="BikCraft">
-            </div>
-        </div>
-
     </section>
 
     <section id="footer" class="footer container">
@@ -111,6 +114,8 @@
             Footer
         </div>
     </section>
-
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/simple-anime.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
