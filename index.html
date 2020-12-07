@@ -5,57 +5,110 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" >
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.css">
+
     <link rel="stylesheet" href="css/style.css">
 
     <script>document.documentElement.className += ' js';;</script>
 </head>
 
 <body><!-- inicio da barra de navegação -->
-    <nav class="navbar navbar-expand-md navbar-color fixed-top">
-        <a href="index.html" class="navbar-brand nav-logo">
-            <img class="img-default" src="img/dev.svg" alt="Jean Oliveira">
-            <img class="img-hover" src="img/dev1.svg" alt="Jean Oliveira">
-        </a>
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon-wht"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbar-content">           
-            <ul class="navbar-nav ml-auto">
-                <li class="line-height"></li>                
-                <li class="nav-item">                                      
-                    <a href="https://github.com/jeanmicoliveira/" target="_blank"><img class="midias img-default" src="img/github.svg" alt="Github"></a>
-                    <a href="https://github.com/jeanmicoliveira/" target="_blank"><img class="midias img-hover" src="img/github-blue.svg" alt="Github"></a>
+    <nav class="navbar container fixed-top">
+
+        <a class="logo" href="index.html"><img src="img/dev1.svg" alt="Logo"></a>
+
+        <div class="navbar-content">
+            <ul>
+                <li class="item">
+                    <a href="https://github.com/jeanmicoliveira/" target="_blank">
+                        <img src="img/github-blue.svg" alt="github">
+                    </a>
                 </li>
-                <li class="nav-item">                                      
-                    <a href="https://www.linkedin.com/in/jeanmic-oliveira/" target="_blank"><img class="midias img-default" src="img/linkedin-round-color-wht.svg" alt="Linkedin"></a>
-                    <a href="https://www.linkedin.com/in/jeanmic-oliveira/" target="_blank"><img class="midias img-hover" src="img/linkedin-round-color.svg" alt="Linkedin"></a>
+                <li class="item">
+                    <a href="https://www.linkedin.com/in/jeanmic-oliveira/" target="_blank">
+                        <img src="img/linkedin-round-color.svg" alt="linkedin">
+                    </a>
                 </li>
             </ul>
-        </div>        
-    </nav> 
+        </div>
+    </nav>
     <!-- fim da barrada de navegação  -->
 
     <section id="home" class="home">
         <div class="home-info">
             <h1>Jean Oliveira</h1>
-            <p>Desenvolvedor Front End</p>
+            <p>Desenvolvedor Web | Front End</p>
         </div>
-        <div>
-            <a href="mainto:jeanoliveira@unigranrio.br" target="_blank">Fale Comigo</a>
+        <div class="home-btn">
+            <a class="btn" href="mainto:jeanoliveira@unigranrio.br" target="_blank">Fale Comigo</a>
         </div>
     </section>
-    
+
     <section id="intro" class="intro">
         <div class="intro-info">
             <blockquote class="quote">
                 <p>"Não são as crises que mudam o mundo, e sim nossa reação a elas."</p>
                 <cite>Zygmunt Bauman</cite>
             </blockquote>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre container">
+        <h2>Um pouco sobre mim ...</h2>
+
+        <div class="sobre-photo">
+            <div class="photo">
+                <img src="img/eu.png" alt="Jean Oliveira">
+            </div>
+
+            <div class="sobre-info">
+                <p>Meu nome é Jean, tenho 30 anos, sou carioca da gema e estudante de Analise e Desenvolvimento de Sistemas.</p><br>
+                <p>Sempre fui apaixonado por tecnologia. Aprendi a utilizar o joystick do Atari do meu pai, antes mesmo de andar e falar.</p><br>
+                <p>Já da pra imaginar de onde veio toda essa paixão, não é mesmo?!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos container">
+        <h2>Projetos</h2>
+
+        <ul class="proj-menu">
+            <li><a href="#flexblog" data-click="flexblog">Flexblog</a></li>
+            <li><a href="#wildbeast" data-click="wildbeast">WildBeast</a></li>
+            <li><a href="#bikcraft" data-click="bikcraft">BikCraft</a></li>
+            <li><a href="#caravan" data-click="caravan">Caravan</a></li>
+        </ul>
+
+        <div class="item" id="flexblog" data-target="flexblog">
+            <div class="item-img">
+                <img src="img/flexblog.jpg" alt="Flexblog">
+            </div>
+        </div>
+
+        <div class="item" id="wildbeast" data-target="wildbeast">
+            <div class="item-img">
+                <img src="img/wildbeast.jpg" alt="WildBeast">
+            </div>
+        </div>
+
+        <div class="item" id="caravan" data-target="caravan">
+            <div class="item-img">
+                <img src="img/caravan.png" alt="Caravan">
+        </div>
+    </div>
+
+        <div class="item" id="bickcraft" data-target="bikcraft">
+            <div class="item-img">
+                <img src="img/bikcraft.jpg" alt="BikCraft">
+            </div>
+        </div>
+
+    </section>
+
+    <section id="footer" class="footer container">
+        <div>
+            Footer
         </div>
     </section>
 
