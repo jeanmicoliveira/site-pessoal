@@ -25,16 +25,18 @@ $(window).scroll(function(){
   }
 })
 
+//animação clique backtoTop
   var $arrow = $('.backtop');
 
   $arrow.click(function(e){
     e.preventDefault();
     var id = $(this).attr('href'),
-        menuHeight = $arrow.innerheight(),
+        menuHeight = $('.navbar').innerHeight(),
         targetOffset = $(id).offset().top;
     $('html, body').animate({
-      scrollTop: targetOffset - menuHeight }, 800)
-  })
+      scrollTop: targetOffset - menuHeight }, 600);
+})
+
 
 
 // animação ao scroll
