@@ -20,16 +20,6 @@ $(document).ready(function(){
     }
   });
 
-  // $(window).scroll(function(){
-  //   var id = $('.separador').offset().top;
-  //   if ($(id) > $(this).scrollTop()){
-  //     $('.separador').addClass('hidden')
-  //   } else {
-  //     $('.separador').removeClass('hidden')
-  //   }
-  //     console.log(id)
-  // });
-
   var $alvo = $('[data-anime="scroll"]'),
       anima = 'anime',
       offset = $(window).height() * 3/4;
