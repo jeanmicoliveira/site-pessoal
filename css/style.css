@@ -72,6 +72,21 @@ a {
 	border-radius: 6px;
 }
 
+/* ANIMAÇÕES */
+
+.js [data-anime] {
+	opacity: 0;
+	transition: 0.4s all ease;
+}
+.js [data-anime].anime {
+	opacity: 1;
+	transform: none;
+	transition: transform 1.2s, opacity 1s;
+}
+.js .hidden {
+	opacity: 0;
+	transition: 0.6s all ease;
+}
 /* NAVBAR */
 
 .navbar {

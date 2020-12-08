@@ -12,6 +12,48 @@ $(document).ready(function(){
     }
   });
 
+  $(window).scroll(function(){
+    if ($(this).scrollTop() <= 0) {
+        $('.intro').addClass('hidden')
+    } else {
+        $('.intro').removeClass('hidden')
+    }
+  });
+
+  // $(window).scroll(function(){
+  //   var id = $('.separador').offset().top;
+  //   if ($(id) > $(this).scrollTop()){
+  //     $('.separador').addClass('hidden')
+  //   } else {
+  //     $('.separador').removeClass('hidden')
+  //   }
+  //     console.log(id)
+  // });
+
+  var $alvo = $('[data-anime="scroll"]'),
+      anima = 'anime',
+      offset = $(window).height() * 3/4;
+
+  function animeScroll() {
+    var docTop = $(window).scrollTop();
+    $alvo.each(function () {
+      var itemTop = $(this).offset().top;
+      if (docTop > itemTop - offset) {
+        $(this).addClass(anima);
+      } else {
+        $(this).removeClass(anima);
+      }
+     });
+  }
+
+  animeScroll();
+
+  $(document).scroll(function(){
+    animeScroll();
+  });
+
+
+
   $('[data-proj]').each(function(){
     var $allTargets = $(this).find('[data-target]'),
         $allClicks = $(this).find ('[data-click]'),
