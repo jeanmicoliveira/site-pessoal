@@ -3,7 +3,7 @@ $(document).ready(function(){
   if(window.SimpleAnime); {
     new SimpleAnime();
   }
-
+// animação Nav
   $(window).scroll(function () {
     if ($(this).scrollTop() > 10) {
         $('.navbar').addClass('navbar-resize')
@@ -11,15 +11,33 @@ $(document).ready(function(){
         $('.navbar').removeClass('navbar-resize')
     }
   });
+// animação do botão backtoTop
 
-  $(window).scroll(function(){
-    if ($(this).scrollTop() <= 0) {
-        $('.intro').addClass('hidden')
-    } else {
-        $('.intro').removeClass('hidden')
-    }
-  });
+$(window).scroll(function(){
 
+  var $alvo = $('.backtop'),
+      show = 'show',
+      halfWindowOffset = $('body').height() / 2;
+  if ($(this).scrollTop() > halfWindowOffset) {
+      $alvo.addClass(show)
+  } else {
+      $alvo.removeClass(show)
+  }
+})
+
+  var $arrow = $('.backtop');
+
+  $arrow.click(function(e){
+    e.preventDefault();
+    var id = $(this).attr('href'),
+        menuHeight = $arrow.innerheight(),
+        targetOffset = $(id).offset().top;
+    $('html, body').animate({
+      scrollTop: targetOffset - menuHeight }, 800)
+  })
+
+
+// animação ao scroll
   var $alvo = $('[data-anime="scroll"]'),
       anima = 'anime',
       offset = $(window).height() * 3/4;
@@ -42,8 +60,7 @@ $(document).ready(function(){
     animeScroll();
   });
 
-
-
+// animação ao click
   $('[data-proj]').each(function(){
     var $allTargets = $(this).find('[data-target]'),
         $allClicks = $(this).find ('[data-click]'),

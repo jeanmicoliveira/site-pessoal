@@ -33,7 +33,38 @@ a {
 * {
 	box-sizing: border-box;
 }
-
+.backtop {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	margin: 0 0 20px 20px;
+	z-index: 999;
+	opacity: 0;
+	transition: 0.4s all ease;
+	color: #eeeeee;
+	animation: pulse 1s infinite;
+}
+@keyframes pulse {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(0.8);
+	}
+}
+#backtop {
+	width: 40px;
+	height: 40px;
+}
+@media (max-width: 768px) {
+	#backtop {
+		display: none;
+	}
+}
+.js .show {
+	opacity: 1;
+	transition: 1s all ease;
+}
 .container {
 	width: 100%;
 	max-width: 1280px;
@@ -251,6 +282,12 @@ a {
 	font-size: 1.25rem;
 	line-height: 1.2;
 }
+
+.sobre-btn {
+	margin: 150px 0 60px 0;
+	text-align: center;
+}
+
 /* PROJETOS */
 
 .projetos {
