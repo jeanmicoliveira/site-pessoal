@@ -19,7 +19,12 @@ body {
 h2 {
 	text-align: center;
 	font-size: 2.25rem;
-	padding: 1rem 0;
+	padding: 20px 0;
+}
+
+h3 {
+	text-align: center;
+	font-size: 1.25rem;
 }
 
 li {
@@ -56,11 +61,11 @@ a {
 	width: 40px;
 	height: 40px;
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 	#backtop {
 		display: none;
 	}
-}
+} */
 .js .show {
 	opacity: 1;
 	transition: 1s all ease;
@@ -197,7 +202,9 @@ a {
 .home-btn {
 	position: relative;
 }
+
 /* INTRODUÇÂO */
+
 .intro {
 	font-size: 0.875rem;
 	line-height: 1.55;
@@ -288,10 +295,44 @@ a {
 	text-align: center;
 }
 
+/* SKILLS */
+
+.skills {
+	background: #2e2e2e;
+	padding-bottom: 80px;
+}
+.skills-info {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 60px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	margin: 80px auto 0 auto;
+}
+
+@media (max-width: 768px) {
+	.skills-info {
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+}
+.skills-info img {
+	width: 40px;
+	height: 40px;
+	margin: 0px;
+}
+.skills-info h3 {
+	font-size: ;
+	padding: 20px;
+}
+.skills-info p {
+	font-size: 0.95em;
+	line-height: 1.2;
+}
 /* PROJETOS */
 
 .projetos {
-	background: #2e2e2e;
 	padding-bottom: 60px;
 }
 .proj-menu {
@@ -346,6 +387,7 @@ a {
 	transition: 0.4s;
 }
 .footer {
+	background: #2e2e2e;
 	padding: 50px 0;
 }
 
