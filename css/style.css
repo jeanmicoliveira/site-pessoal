@@ -88,7 +88,7 @@ a {
 	background: transparent;
 	border: 1px solid #eeeeee;
 	border-radius: 5px;
-	padding: 15px;
+	padding: 20px;
 	letter-spacing: 1.5px;
 	transition: 0.3s;
 }
@@ -323,7 +323,6 @@ a {
 	margin: 0px;
 }
 .skills-info h3 {
-	font-size: ;
 	padding: 20px;
 }
 .skills-info p {
@@ -337,7 +336,7 @@ a {
 }
 .proj-menu {
 	text-align: center;
-	margin: 60px 0 30px 0;
+	margin: 60px auto 30px auto;
 }
 .proj-menu li {
 	display: inline-block;
@@ -349,10 +348,15 @@ a {
 	.proj-menu {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		margin: 30px 0 15px 0;
+		justify-content: center;
+	}
+	.proj-menu .btn {
+		width: 140px;
+		margin-left: 0;
+		margin-right: 0;
 	}
 	.proj-menu li + li {
-		margin: 0;
+		margin: 0 auto;
 	}
 }
 .projetos ul li a {
